@@ -64,11 +64,29 @@ a:hover {
   flex-wrap: wrap;
 }
 
+.site-nav__home-group {
+  margin-right: auto;
+}
+
 .site-nav__home {
   font-weight: 600;
   color: var(--color-text);
   text-decoration: none;
-  margin-right: auto;
+}
+
+.site-nav__links {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.site-nav__links a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.site-nav__links a:hover {
+  color: var(--color-link);
 }
 
 .site-nav__home:hover {

@@ -11,7 +11,14 @@
     <div class="site">
       <header class="site-header">
         <nav class="site-nav">
-          <a href="/{{ lang }}/" class="site-nav__home">{{ "site_title" | i18n }}</a>
+          <div class="site-nav__home-group">
+            <a href="/{{ lang }}/" class="site-nav__home">{{ "site_title" | i18n }}</a>
+            <span class="site-nav__links">
+              <a href="mailto:adorables.ambassade_0z@icloud.com">{{ "email_label" | i18n }}</a>
+              · <a href="https://mastodon.gamedev.place/@jki" target="_blank" rel="me noopener">mastodon</a>
+              · <a href="https://instagram.com/jkirsteins" target="_blank" rel="noopener">instagram</a>
+            </span>
+          </div>
           <span class="lang-picker">
             {%- for l in site.languages -%}
               {%- if l == lang -%}
