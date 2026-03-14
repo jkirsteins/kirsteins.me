@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+---
+<h2>Stuff I've made</h2>
+
+<ul>
+  <li><a href="https://example.com" target="_blank" rel="noopener">Example Project</a> — a brief description of what this does</li>
+  <li><a href="https://example.com" target="_blank" rel="noopener">Another Project</a> — replace these with your real projects</li>
+</ul>
+
+{% set articles = collections.articles_all %}
+{% if articles.length %}
+<h2>Articles</h2>
+
+<ul>
+  {% for article in articles | reverse %}
+  <li>
+    <a href="{{ article.url }}">{{ article.data.title }}</a>
+    <span class="muted">{{ article.date | dateDisplay(page.lang) }}</span>
+    {% set langs = article | translations %}
+    {% if langs.length > 1 %}
+      <span class="muted">({% for t in langs %}<a href="{{ t.url }}">{{ t.lang }}</a>{% if not loop.last %} · {% endif %}{% endfor %})</span>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
