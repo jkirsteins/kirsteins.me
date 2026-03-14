@@ -4,7 +4,7 @@ layout: layouts/base.njk
 <article>
   <header class="article-header">
     <time class="article-header__date" datetime="{{ date | dateDisplay('en') }}">
-      {{ date | dateDisplay(page.lang) }}
+      {{ date | dateDisplay(lang) }}
     </time>
     <h1 class="page-title">{{ title }}</h1>
   </header>
@@ -13,5 +13,5 @@ layout: layouts/base.njk
     {{ content | safe }}
   </div>
 
-  <a href="/{{ page.lang }}/" class="article-back">← Back</a>
+  <a href="/{{ lang }}/" class="article-back">← Back</a>
 </article>

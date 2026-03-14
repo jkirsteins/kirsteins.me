@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ page.lang or 'en' }}">
+<html lang="{{ lang or 'en' }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,7 +11,17 @@
     <div class="site">
       <header class="site-header">
         <nav class="site-nav">
-          <a href="/{{ page.lang }}/" class="site-nav__home">{{ "site_title" | i18n }}</a>
+          <a href="/{{ lang }}/" class="site-nav__home">{{ "site_title" | i18n }}</a>
+          <span class="lang-picker">
+            {%- for l in site.languages -%}
+              {%- if l == lang -%}
+                <strong>{{ l }}</strong>
+              {%- else -%}
+                <a href="/{{ l }}/" class="site-nav__link">{{ l }}</a>
+              {%- endif -%}
+              {%- if not loop.last %} · {% endif -%}
+            {%- endfor -%}
+          </span>
         </nav>
       </header>
 

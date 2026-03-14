@@ -4,12 +4,12 @@ layout: layouts/base.njk
 <h2>{{ "stuff_title" | i18n }}</h2>
 
 <ul>
-  <li><a href="https://vardulis.kirsteins.me" target="_blank" rel="noopener">Wordlike</a> — {{ "vardulis_description" | i18n }} <a href="https://apps.apple.com/us/app/wordlike/id1619500618" target="_blank" rel="noopener">App Store</a> and the <a href="https://vardulis.kirsteins.me" target="_blank" rel="noopener">web</a>.</li>
+  <li><a href="https://vardulis.kirsteins.me" target="_blank" rel="noopener">Vārdulis</a> — {{ "vardulis_description" | i18n }} <a href="https://apps.apple.com/us/app/wordlike/id1619500618" target="_blank" rel="noopener">App Store</a> un <a href="https://vardulis.kirsteins.me" target="_blank" rel="noopener">tīmeklī</a>.</li>
 </ul>
 
 {% set articles = collections.articles_all %}
 {% if articles.length %}
-<h2>Articles</h2>
+<h2>{{ "articles_title" | i18n }}</h2>
 
 <ul>
   {% for article in articles | reverse %}

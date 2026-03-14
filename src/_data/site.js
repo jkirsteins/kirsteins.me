@@ -3,5 +3,5 @@ module.exports = {
   url: "https://kirsteins.me",
   description: "Personal website of Jānis Kirsteins",
   defaultLang: "en",
-  languages: ["en"],
+  languages: ["en", "lv", "fr"],
 };
