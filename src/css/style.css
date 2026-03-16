@@ -131,6 +131,15 @@ li + li {
   margin-top: 0.35em;
 }
 
+/* App icons inline with project names */
+.app-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 22%;
+  vertical-align: -0.3em;
+  margin-right: 0.25em;
+}
+
 /* Article single */
 .article-header {
   margin-bottom: 2rem;

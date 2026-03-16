@@ -8,5 +8,6 @@
   "footer_text": "© {year} Jānis Kirsteins",
   "stuff_title": "Stuff I've made",
   "vardulis_description": "a daily word game in Latvian, French, and English (American & British). Available on the",
-  "email_label": "e-mail"
+  "email_label": "e-mail",
+  "vgw_description": "a gym workout tracker for iPhone and Apple Watch that syncs with Apple Health and Strava."
 }
