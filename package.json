@@ -17,7 +17,8 @@
   "license": "ISC",
   "type": "commonjs",
   "lint-staged": {
-    "*.{js,json,md,css}": "prettier --write"
+    "*.{js,json,md,css}": "prettier --write",
+    "*.njk": "node scripts/no-emdash.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
